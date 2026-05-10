@@ -65,6 +65,9 @@ ufw allow $SSH_PORT/tcp comment 'SSH'
 ufw allow 80/tcp comment 'HTTP'
 ufw allow 443/tcp comment 'HTTPS'
 
+ufw allow 9999/tcp comment 'shadowsocks'
+ufw allow 9999/udp comment 'shadowsocks'
+
 # Разрешаем доступ к ноде ТОЛЬКО с IP панели на указанном порту
 ufw allow from $PANEL_IP to any port $NODE_PORT proto tcp comment 'Remnawave API'
 
